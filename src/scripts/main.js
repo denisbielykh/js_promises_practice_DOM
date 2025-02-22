@@ -42,11 +42,15 @@ const p2 = new Promise((resolve) => {
     { once: true },
   );
 
-  doc.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-    rightClick = true;
-    callResolve();
-  });
+  doc.addEventListener(
+    'contextmenu',
+    (e) => {
+      e.preventDefault();
+      rightClick = true;
+      callResolve();
+    },
+    { once: true },
+  );
 });
 
 const p3 = new Promise((resolve) => {
